@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/fonts/Quicksand-Light.woff2') format('woff2'),
+        url('/fonts/Quicksand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('/fonts/OpenSans-Light.woff2') format('woff2'),
+        url('/fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+body{
+background-color: #D5DBDB;
+font-family: 'Open Sans'
+}
+
+p{
+  font-size: 12pt;
+  font-family:'Open Sans Light';
+}
+
+.top-banner{
+  background-color: #75b79e;
+  height: 80px;
+  margin: 0px;
+  margin-top: 0px;
+}
+
+.login-info{
+  padding-right: 10px;
+  font-size: 12pt;
+}

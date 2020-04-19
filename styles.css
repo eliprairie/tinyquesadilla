@@ -61,6 +61,15 @@ p{
 }
 
 .login-info{
-  padding-right: 10px;
   font-size: 12pt;
+  color: #347474;
+}
+
+.login-info a:link {
+  color: #347474;
+}
+
+.login-info a:hover{
+  color: #75b79e;
+  text-decoration: none;
 }

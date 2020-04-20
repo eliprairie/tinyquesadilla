@@ -23,46 +23,59 @@
 }
 
 
-h1{
+h1 {
 
 }
 
-h2{
+h2 {
 
 }
 
-h3{
+h3 {
 
 }
 
-h4{
+h4 {
 
 }
 
-h5{
+h5 {
 
 }
 
-body{
-background-color: #D5DBDB;
-font-family: 'Open Sans'
+html{
+  height: 100%;
 }
 
-p{
+body {
+background-color: whitesmoke;
+font-family: 'Open Sans';
+height: 100%;
+}
+
+p {
   font-size: 12pt;
   font-family:'Open Sans Light';
 }
 
-.top-banner{
+.top-banner {
   background-color: #75b79e;
   height: 80px;
   margin: 0px;
   margin-top: 0px;
+  position: relative;
 }
 
-.login-info{
+.navbar-brand{
+  font-family: 'Quicksand';
+}
+
+.login-info {
+  font-family: 'Quicksand';
   font-size: 12pt;
   color: #347474;
+  position: relative;
+
 }
 
 .login-info a:link {
@@ -72,4 +85,59 @@ p{
 .login-info a:hover{
   color: #75b79e;
   text-decoration: none;
+}
+
+.content {
+  font-family: 'Open Sans';
+  color: dimgrey;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.petname{
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  background-color: dimgrey;
+  color: #fff;
+}
+
+.pet{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+}
+
+.stats{
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  text-align: center;
+  background-color: gainsboro;
+}
+
+.inventory{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+  max-width: 500px;
+  height: auto;
 }

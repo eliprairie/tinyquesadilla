@@ -10,6 +10,43 @@
     color: #fff;
   }
 
+.plantname-area{
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    background-color: dimgrey;
+    color: #fff;
+  }
+
+  .plantname-change{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    background-color: dimgrey;
+    color: #fff;
+    text-align: center;
+  }
+
+  #submit-name {
+      background: transparent;
+      border: 0px;
+      color: #75b79e;
+  }
+
+.rename {
+}
+
 .plant-container {
     display: flex;
     flex-direction: column;

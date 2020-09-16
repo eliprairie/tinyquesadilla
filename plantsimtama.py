@@ -128,8 +128,18 @@ class Sim:
                 # draw main game area and plant based on whether light is on
                 pygame.draw.ellipse(self.game_screen, plant_window_color, [100, 75, 400, 400])
                 pygame.draw.ellipse(self.game_screen, button_press_color, [400, 475, 50, 50])
-                my_plant.idle(self.game_screen)
-                my_plant.draw(self.game_screen)
+
+                if my_plant.height <= 60:
+                    my_plant.idle(self.game_screen)
+                    my_plant.draw(self.game_screen)
+                elif my_plant.height > 60:
+                    my_plant.image_path = 'sprite2.png'
+                    my_plant.width = 100
+                    my_plant.plant_image = pygame.image.load(my_plant.image_path)
+                    my_plant.image = pygame.transform.scale(my_plant.plant_image, (my_plant.width, my_plant.height))
+                    my_plant.idle(self.game_screen)
+                    my_plant.draw(self.game_screen)
+
 
                 # display thirst and hunger if light is on
                 thirst_display = font.render('Thirst: ' + str(my_plant.thirst), True, text_press_color)
@@ -139,6 +149,17 @@ class Sim:
 
                 lamp_button_label = font.render('S', True, text_press_color)
                 self.game_screen.blit(lamp_button_label, (420, 495))
+
+                # create unhappy condition
+                if my_plant.hunger >= 15:
+                    text = font.render('Plant is hungry!', True, text_unpress_color)
+                    self.game_screen.blit(text, (210, 150))
+                    pygame.display.update()
+
+                if my_plant.thirst >= 15:
+                    text = font.render('Plant is thirsty!', True, text_unpress_color)
+                    self.game_screen.blit(text, (205, 175))
+                    pygame.display.update()
 
             elif self.light_on is False:
                 pygame.draw.ellipse(self.game_screen, dark_plant_window_color, [100, 75, 400, 400])
@@ -162,7 +183,7 @@ class Sim:
             pygame.display.update()
             clock.tick(self.tick_rate)
 
-        # create win condition
+            # create win condition
             if my_plant.height >= 65 and my_plant.hunger <= 0 and my_plant.thirst <= 0 and plant_sim.light_on is True:
                 text = font.render('It\'s harvest time! Congratulations!', True, text_unpress_color)
                 self.game_screen.blit(text, (110, 250))
@@ -172,7 +193,7 @@ class Sim:
                 pygame.time.delay(7000)
                 is_harvest_time = True
 
-        # create lose condition
+            # create lose condition
             elif my_plant.hunger >= 25 and my_plant.thirst >= 25:
                 text = font.render('Oh no! Your plant died. :(', True, text_unpress_color)
                 self.game_screen.blit(text, (155, 200))

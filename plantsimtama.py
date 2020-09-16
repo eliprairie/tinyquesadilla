@@ -17,7 +17,7 @@ text_press_color = (78, 78, 78)
 button_unpress_color = (178, 178, 178)
 button_press_color = (142, 142, 142)
 pygame.font.init()
-font = pygame.font.SysFont('', 24)
+font = pygame.font.SysFont(None, 24)
 
 
 # create the plant stats printout function
@@ -172,6 +172,18 @@ class Sim:
 
                 # delay for 7 seconds, then quit
                 pygame.time.delay(7000)
+                is_harvest_time = True
+
+        # create lose condition
+            elif my_plant.hunger >= 25 and my_plant.thirst >= 25:
+                text = font.render('Oh no! Your plant died. :(', True, text_unpress_color)
+                self.game_screen.blit(text, (200, 200))
+                text = font.render('Start over.', True, text_unpress_color)
+                self.game_screen.blit(text, (260, 225))
+                pygame.display.update()
+
+                # delay for 3 seconds, then start over
+                pygame.time.delay(3000)
                 is_harvest_time = True
 
 

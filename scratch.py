@@ -53,7 +53,7 @@ print(
 # create choose function to get input
 def choose():
     choice = ""
-    while choice != "f" and choice != "s" and choice != "w":
+    while not is_harvest_time:
         choice = input("What would you like to do first? ").lower().strip()
 
     if choice == "f" and not is_harvest_time:

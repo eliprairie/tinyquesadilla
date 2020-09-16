@@ -16,8 +16,6 @@ text_unpress_color = (255, 255, 255)
 text_press_color = (78, 78, 78)
 button_unpress_color = (178, 178, 178)
 button_press_color = (142, 142, 142)
-pygame.font.init()
-font = pygame.font.SysFont(None, 24)
 
 
 # create the plant stats printout function
@@ -69,7 +67,7 @@ class Sim:
                     # if key is w, run water
                     if event.key == pygame.K_w and plant_sim.light_on is True:
                         text = font.render('You give your plant some water.', True, text_unpress_color)
-                        self.game_screen.blit(text, (180, 200))
+                        self.game_screen.blit(text, (135, 200))
 
                         # push water button on screen
                         pygame.draw.ellipse(self.game_screen, button_press_color, [150, 475, 50, 50])
@@ -86,7 +84,7 @@ class Sim:
                     # if key is f, add food
                     elif event.key == pygame.K_f and plant_sim.light_on is True:
                         text = font.render('You give your plant some food.', True, text_unpress_color)
-                        self.game_screen.blit(text, (180, 200))
+                        self.game_screen.blit(text, (140, 200))
 
                         # push food button on screen
                         pygame.draw.ellipse(self.game_screen, button_press_color, [275, 500, 50, 50])
@@ -135,9 +133,9 @@ class Sim:
 
                 # display thirst and hunger if light is on
                 thirst_display = font.render('Thirst: ' + str(my_plant.thirst), True, text_press_color)
-                self.game_screen.blit(thirst_display, (265, 375))
+                self.game_screen.blit(thirst_display, (248, 375))
                 hunger_display = font.render('Hunger: ' + str(my_plant.hunger), True, text_press_color)
-                self.game_screen.blit(hunger_display, (258, 400))
+                self.game_screen.blit(hunger_display, (250, 400))
 
                 lamp_button_label = font.render('S', True, text_press_color)
                 self.game_screen.blit(lamp_button_label, (420, 495))
@@ -147,7 +145,7 @@ class Sim:
                 pygame.draw.ellipse(self.game_screen, button_unpress_color, [400, 475, 50, 50])
                 text = font.render('The light is off.', True, text_unpress_color)
                 lamp_button_label = font.render('S', True, text_unpress_color)
-                self.game_screen.blit(text, (240, 280))
+                self.game_screen.blit(text, (200, 280))
                 self.game_screen.blit(lamp_button_label, (420, 495))
 
             # draw basic main menu area that is returned to on tick
@@ -167,7 +165,7 @@ class Sim:
         # create win condition
             if my_plant.height >= 65 and my_plant.hunger <= 0 and my_plant.thirst <= 0 and plant_sim.light_on is True:
                 text = font.render('It\'s harvest time! Congratulations!', True, text_unpress_color)
-                self.game_screen.blit(text, (175, 250))
+                self.game_screen.blit(text, (110, 250))
                 pygame.display.update()
 
                 # delay for 7 seconds, then quit
@@ -177,9 +175,9 @@ class Sim:
         # create lose condition
             elif my_plant.hunger >= 25 and my_plant.thirst >= 25:
                 text = font.render('Oh no! Your plant died. :(', True, text_unpress_color)
-                self.game_screen.blit(text, (200, 200))
+                self.game_screen.blit(text, (155, 200))
                 text = font.render('Start over.', True, text_unpress_color)
-                self.game_screen.blit(text, (260, 225))
+                self.game_screen.blit(text, (235, 225))
                 pygame.display.update()
 
                 # delay for 3 seconds, then start over
@@ -237,7 +235,8 @@ class Plant:
 
 # start pygame
 pygame.init()
-
+pygame.font.init()
+font = pygame.font.SysFont('consolas', 20)
 
 # begin new game
 plant_sim = Sim(window_title, window_width, window_height, False)

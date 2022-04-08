@@ -58,14 +58,6 @@ p {
   font-family:'Open Sans Light';
 }
 
-.top-banner {
-  background-color: #75b79e;
-  height: 80px;
-  margin: 0px;
-  margin-top: 0px;
-  position: relative;
-}
-
 .navbar-brand{
   font-family: 'Quicksand';
 }
@@ -78,66 +70,10 @@ p {
 
 }
 
-.login-info a:link {
-  color: #347474;
-}
-
-.login-info a:hover{
-  color: #75b79e;
-  text-decoration: none;
-}
-
 .content {
   font-family: 'Open Sans';
   color: dimgrey;
   position: relative;
   padding-top: 20px;
   padding-left: 10px;
-}
-
-.petname{
-  display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  border-radius: 10px 10px 0px 0px;
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-  background-color: dimgrey;
-  color: #fff;
-}
-
-.pet{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-}
-
-.stats{
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-  text-align: center;
-  background-color: gainsboro;
-}
-
-.inventory{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 70%;
-  max-width: 500px;
-  height: auto;
 }

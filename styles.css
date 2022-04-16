@@ -22,6 +22,9 @@
     font-style: normal;
 }
 
+hr {
+  margin: 2em 0;
+}
 
 h1 {
 
@@ -40,7 +43,7 @@ h4 {
 }
 
 h5 {
-
+  font-size: 1em;
 }
 
 html{
@@ -48,9 +51,9 @@ html{
 }
 
 body {
-background-color: whitesmoke;
-font-family: 'Open Sans';
-height: 100%;
+  background-color: whitesmoke;
+  font-family: 'Open Sans';
+  height: 100%;
 }
 
 p {
@@ -70,10 +73,42 @@ p {
 
 }
 
+.content-holder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .content {
   font-family: 'Open Sans';
   color: dimgrey;
   position: relative;
   padding-top: 20px;
   padding-left: 10px;
+  width: 70%;
+}
+
+.col-holder {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  margin: 1em;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.img-holder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.img-placeholder {
+  width: 90%;
+  height: 90%;
+  padding: 1em;
+  margin: 1em;
 }
